@@ -1,2 +1,5 @@
 # genetic_landscape
-It obtains a genetic landscape based on pairwise population genetic divergence, as measured among multiple collection point locations
+It obtains a genetic landscape based on pairwise population genetic divergence, as measured among multiple collection point locations, according the following procedure: (i) a network connecting all collection points to their nearest neighbours with non-overlapping edges is drawn; (ii) the midpoints between each connected edge are mapped, and values of genetic distances are attached to these points; (iii) a spatial interpolation algorithm, inverse distance weighted interpolation, is used to generate a surface from the mapped genetic distance values; and (iv) to avoid extrapolating beyond the spatial extent of collection points, the genetic landscape is clipped to the extent of the original network (sampling extent) and to the boundaries of the region of analysis.The inputs are: (1) table with locality codes and geographic coordinates; (2) pairwise matrix of genetic divergences between populations/localities; (3) study area mask raster.
+Input files:
+genetic_landscape.r            locs.txt           gdist.txt        ip_mask.asc
+
